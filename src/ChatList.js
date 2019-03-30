@@ -25,6 +25,10 @@ class ChatList extends Component<Props> {
     );
   };
 
+  componentWillMount(){
+    console.log(JSON.stringify(messages));
+  }
+
   render() {
     let searchResults = messages.filter(this.filterBySearchTerm);
     if (this.props.searchTerm.length >= 1) {
